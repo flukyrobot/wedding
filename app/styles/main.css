@@ -1,0 +1,149 @@
+html{height: 100%; width: 100%;}
+body {
+    background: #fafafa;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color: #333;
+    height: 100%;
+    width: 100%;
+}
+
+.hero-unit {
+    margin: 50px auto 0 auto;
+    width: 300px;
+    font-size: 18px;
+    font-weight: 200;
+    line-height: 30px;
+    background-color: #eee;
+    border-radius: 6px;
+    padding: 60px;
+}
+
+.hero-unit h1 {
+    font-size: 60px;
+    line-height: 1;
+    letter-spacing: -1px;
+}
+
+.content-section{
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+}
+
+div.big,div.small{
+    position: relative;
+    display: block;
+    float: left;
+    height: 100%;
+    padding: 0 20px;
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;     
+}
+
+div.big{
+    width: 61.8%;
+}
+
+div.small{ 
+    width: 38.2%;
+}
+
+section nav ul li a,section nav ul li a:visited{
+    text-decoration: none;
+    /*line-height: 1em;*/
+
+}
+
+section nav ul{
+    list-style-type: none;
+    padding:0;
+
+}
+
+section nav ul li{
+    overflow: hidden;
+}
+
+#main{
+    background: #1C1C1C;
+}
+
+#main .big{
+    background: #1C1C1C url(../images/bench.png) no-repeat;
+    background-position: center bottom;
+}
+
+#main nav ul{
+    
+}
+
+#main nav a{
+    color: #66688E;
+    line-height: .75em;
+    font-family: 'Amatic SC';
+}
+#main nav a:hover{
+    color: white;
+}
+#main nav li{
+    position: relative;
+}
+
+#whatLink{
+
+}
+#whatLink a, #whatLink a:visited{
+    
+    /*font-family: 'Cherry Swash', cursive;*/
+}
+
+#whereLink{
+}
+#whereLink a,#whereLink a:visited{
+    /*font-family: 'Molle', cursive;*/
+    
+}
+
+#whoLink{
+}
+#whoLink a,#whoLink a:visited{
+    /*font-family: 'Mystery Quest', cursive;*/
+}
+
+#photosLink{
+
+}
+#photosLink a, #photosLink a:visited{
+    /*font-family: 'Amatic SC';*/
+}
+
+#guestbookLink{
+
+}
+#guestbookLink a, #guestbookLink a:visited{
+    /*font-family: 'Leckerli One';*/
+
+}
+#registryLink{
+
+}
+#registryLink a, #registryLink a:visited{
+    /*font-family: 'Nixie One';*/
+
+}
+
+#main .subsection{
+    background: #66688E;
+    padding: 10px;
+    width: 45%;
+    max-width: 150px;
+
+}
+#main .subsection a, #main .subsection a:visited{
+    color: #1C1C1C;
+}
+#main .subsection a:hover, #main #whatLink a, #main #whatLink a:visited{
+    color: white;
+}
