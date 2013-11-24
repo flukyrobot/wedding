@@ -2,25 +2,70 @@
 <!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
 <!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
 <!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-  <head>
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>ourwedding</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
+    <link href='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.css' rel='stylesheet' />
+    <script src='//api.tiles.mapbox.com/mapbox.js/v1.4.0/mapbox.js'></script>
+  
     <style>
-      @import url(http://fonts.googleapis.com/css?family=Cherry+Swash);
-      @import url(http://fonts.googleapis.com/css?family=Cherry+Swash|Molle:400italic|Amatic+SC|Karla|Nixie+One|Tangerine|Mystery+Quest|Numans|Leckerli+One);
+        @import url(http://fonts.googleapis.com/css?family=Cherry+Swash);
+          @import url(http://fonts.googleapis.com/css?family=Cherry+Swash|Molle:400italic|Amatic+SC|Karla|Nixie+One|Tangerine|Mystery+Quest|Numans|Leckerli+One|Unkempt|Cherry+Swasj);
     </style>
     <link rel="stylesheet" href="bower_components/normalize-css/normalize.css" />
     <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
 
-        <!-- build:css(.tmp) styles/main.css -->
-        <link rel="stylesheet" href="styles/main.css">
-        <!-- endbuild -->
+    <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="styles/main.css">
+    <!-- endbuild -->
 </head>
-  <body ng-app="weddingApp" ng-controller="MainCtrl" >
+
+<body ng-app="weddingApp" ng-controller="MainCtrl">
+    <nav id="site_nav" site-navigation>
+        <select scroll-to class="nav" where-am-i>
+<!--            <option value="#">Navigation</option>-->
+            <option value="#main">Home</option>
+            <option value="#story">story</option>
+            <option value="#where">where</option>
+            <option value="#who">RSVP</option>
+            <option value="#photos">photos</option>
+            <option value="#guestbook">guestbook</option>
+            <option value="#registry">registry</option>
+        </select>
+        <ul>
+            <li>
+                <div>&nbsp;</div>
+            </li>
+            <li id="whatLink">
+                <a href="#main" scroll-to="#main">Home</a>
+            </li>
+            <li id="storyLink">
+                <a href="#story" scroll-to="#story">Our Story</a>
+            </li>
+            <li id="whereLink">
+                <a href="#where" scroll-to="#where">Where</a>
+            </li>
+            <li id="whoLink">
+                <a href="#who" scroll-to="#who">RSVP</a>
+            </li>
+            <li id="photosLink">
+                <a href="#photos" scroll-to="#photos">Photos</a>
+            </li>
+            <li id="guestbookLink">
+                <a href="#guestbook" scroll-to="#guestbook">GuestBook</a>
+            </li>
+            <li id="registryLink">
+                <a href="#registry" scroll-to="#registry">Registry</a>
+            </li>
+        </ul>
+    </nav>
     <!--[if lt IE 7]>
       <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
     <![endif]-->
@@ -32,25 +77,134 @@
 
     <!-- Add your site or application content here -->
     <section id="main" class="content-section">
-      <div class="big"><br/></div>
-      <div class='small'>
-        <div class="subsection">
-          <nav>
-              <ul>
-                <li id="whatLink"><a fit-text=""  href="#what">Home</a></li>
-                <li id="whereLink"><a fit-text=".subsection"  href="#where">Where</a></li> 
-                <li id="whoLink"><a fit-text=".subsection"  href="#who">YOU</a></li>
-                <li id="photosLink"><a fit-text=".subsection"  href="#photos">Photos</a></li>
-                <li id="guestbookLink"><a fit-text=".subsection"  href="#guestbook">GuestBook</a></li>
-                <li id="registryLink"><a fit-text=".subsection"  href="#registry">Registry</a></li>
-              </ul>
-          </nav>
-        </div>
-      </div>
+        <a name="main"></a>
+<!--        <div class="small">-->
+            <ul>
+                <li id="whatLink">
+                    <a href="#main" scroll-to="#main">Home</a>
+                </li>
+                <li id="storyLink">
+                    <a href="#story" scroll-to="#story">Our Story</a>
+                </li>
+                <li id="whereLink">
+                    <a href="#where" scroll-to="#where">Where</a>
+                </li>
+                <li id="whoLink">
+                    <a href="#who" scroll-to="#who">YOU</a>
+                </li>
+                <li id="photosLink">
+                    <a href="#photos" scroll-to="#photos">Photos</a>
+                </li>
+                <li id="guestbookLink">
+                    <a href="#guestbook" scroll-to="#guestbook">GuestBook</a>
+                </li>
+                <li id="registryLink">
+                    <a href="#registry" scroll-to="#registry">Registry</a>
+                </li>
+            </ul>
+<!--        </div>-->
+<!--        <div class='big'>-->
+<!--        </div>-->
     </section>
-    <section id="where" class="content-section"></section>
-    <section class="content-section"></section>
-    <section class="content-section"></section>
+    <section id="story" class="content-section">
+        <a name="story"></a>
+        <div class="big">
+            <h1 class="title">Our Story</h1>
+            <div>
+                <p>On November 27, 2012, Jeannine sent a message to a stranger on OkCupid with no profile, only pictures and a strange username.</p> 
+
+<p>They would exchange messages back and forth through the website for a few days, until Jeannine finally got tired of draining her phone battery and gave him her number (in other words, she manned up).  It was only two or three days later that Paul suggest they hang out.  Jeannine already had a date planned with someone else that she had been talking to for awhile but Paul wanted to meet her first.  Her first date was to take place Saturday evening so Paul talked her into meeting him Friday night instead.  Though Jeannine was taken back by his leather jacket and strange facial hair at first, the date ended up being a huge success.</p>
+
+<p>They went out again two days later, the date they had originally planned, but added Jeannine’s younger sister, since the pressure was off.  They were pretty much inseparable from that day on.</p>
+
+<p>Shortly after they would become “Facebook official,” which is something the kids do nowadays and decide to move in together a mere three months later.</p>
+
+<p>In June of 2013, Jeannine and Paul went on their first vacation together to Punta Cana, Dominican Republic with two of Paul’s friends.  There they celebrated their six month anniversary by each getting a spectacular case of sun poisoning.
+
+<p>When they returned, they decided to adopt two kittens to fill the void left by Jeannine’s cat, who had been put down prior to taking their vacation.  On June 24th, Dory and Mady were added to their little family.</p>
+
+<p>While some people feel that this all happened too fast, the timing is different for everyone.  Paul knew the time was right and decided that he didn’t want Jeannine to reactivate her OkCupid account and find that mystery guy she had gone out with in between their first and second dates; he put a ring around Dory’s collar and asked Jeannine to marry him on July 7, 2013. She said yes, obviously.</p>
+
+<p>The rest of our story involves all of you… help us get it off to a wonderful start by joining us for our wedding.</p>
+
+            </div>
+            <img src="images/dory_ring.png" />
+        </div>
+        <div class="small">
+            <h1 class="sidetitle">Our Story</h1>
+        </div>
+    </section>
+    <section id="where" class="content-section">
+        <a name="where"></a>
+        <div class="big">
+            <h1 class="title">Where</h1>
+            <div>
+                <p>Our wedding will be taking place in Stevensville, MD. If you're familiar with Maryland then you probably know Stevensville better as Kent Island; for those coming from out of town, Stevensville isn't but a short hop from Annapolis. </p>
+               <p class="centered"$><a href="https://www.google.com/maps/preview?authuser=0#!data=!1m4!1m3!1d117838!2d-76.330812!3d38.9922124!4m38!3m16!1m0!1m5!1sKent+Island+Fire+Co%2C+1610+Main+St%2C+Chester%2C+MD+21619!2s0x89b81a915989478f%3A0xd0a24081a2e80b9a!3m2!3d38.977826!4d-76.288116!3m8!1m3!1d117863!2d-76.3202102!3d38.977233!3m2!1i958!2i912!4f13.1!5m18!2m17!1m15!1s0x0%3A0xd0a24081a2e80b9a!2sKent+Island+Fire+Co!3m8!1m3!1d117863!2d-76.3202102!3d38.977233!3m2!1i958!2i912!4f13.1!4m2!3d38.977827!4d-76.2881184!5e4!6sstevensville%2C+md+fire+station!7m1!3b1&fid=0" taget="_blank">Kent Island Fire Co.</a> (Google Maps)</p>
+            </div>
+            
+            <span map id="map"></span>
+            <script>
+            var map = L.mapbox.map('map', 'ppantz.g6h1f0o4')
+      .setView([38.977791, -76.288440], 11);
+            </script>
+        </div>
+        <div class="small">
+            <h1 class="sidetitle">where</h1>
+        </div>
+    </section>
+    <section id="who" class="content-section">
+        <a name="who"></a>
+        <div class="big">
+            <h1 class="title">RSVP</h1>
+            <br style="clear:both" />
+            <div>
+                <p>under construction</p>
+            </div>
+        </div>
+        <div class="small">
+            <h1 class="sidetitle">YOU</h1>
+        </div>
+    </section>
+    <section id="photos" class="content-section">
+        <a name="photos"></a>
+        <div class="big">
+            <h1 class="title">Photos</h1>
+            <br style="clear:both" />
+            <div>
+                <p>under construction</p>
+            </div>
+        </div>
+        <div class="small">
+            <h1 class="sidetitle">Photos</h1>
+        </div>
+    </section>
+    <section id="guestbook" class="content-section">
+        <a name="guestbook"></a>
+        <div class="big">
+            <h1 class="title">Guestbook</h1>
+            <br style="clear:both" />
+            <div>
+                <p>under construction</p>
+            </div>
+        </div>
+        <div class="small">
+            <h1 class="sidetitle">Guestbook</h1>
+        </div>
+    </section>
+    <section id="registry" class="content-section">
+        <a name="registry"></a>
+        <div class="big">
+            <h1 class="title">Registry</h1>
+            <br style="clear:both" />
+             <div>
+                <p>We are currently only registered with <a href="http://www.bedbathandbeyond.com/store/giftregistry/view_registry_guest.jsp?pwsToken=&eventType=Wedding&registryId=13644998&pwsurl=">Bed Bath & Beyond</a>.</p>
+            </div>
+        </div>
+        <div class="small">
+            <h1 class="sidetitle">Registry</h1>
+        </div>
+    </section>
 
 
 
@@ -58,32 +212,44 @@
 
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID -->
-     <script>
-       (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-       (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-       m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-       })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    <script>
+        (function(i, s, o, g, r, a, m) {
+            i['GoogleAnalyticsObject'] = r;
+            i[r] = i[r] || function() {
+                (i[r].q = i[r].q || []).push(arguments)
+            }, i[r].l = 1 * new Date();
+            a = s.createElement(o),
+            m = s.getElementsByTagName(o)[0];
+            a.async = 1;
+            a.src = g;
+            m.parentNode.insertBefore(a, m)
+        })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-       ga('create', 'UA-XXXXX-X');
-       ga('send', 'pageview');
+        ga('create', 'UA-XXXXX-X');
+        ga('send', 'pageview');
     </script>
     <script src="bower_components/underscore/underscore-min.js"></script>
     <script src="bower_components/jquery/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
-<script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
+    <script src="bower_components/angular-ui/build/angular-ui.min.js"></script>
     <script src="bower_components/angular-ui/modules/directives/keypress/keypress.js"></script>
 
-        <!-- build:js scripts/modules.js -->
-        <script src="bower_components/angular-resource/angular-resource.js"></script>
-        <script src="bower_components/angular-cookies/angular-cookies.js"></script>
-        <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
-        <!-- endbuild -->
+    <!-- build:js scripts/modules.js -->
+    <script src="bower_components/angular-resource/angular-resource.js"></script>
+    <script src="bower_components/angular-cookies/angular-cookies.js"></script>
+    <script src="bower_components/angular-sanitize/angular-sanitize.js"></script>
+    <!-- endbuild -->
 
-        <!-- build:js({.tmp,app}) scripts/scripts.js -->
-        <script src="scripts/app.js"></script>
-        <script src="scripts/controllers/main.js"></script>
-        <script src="scripts/directives/content-section.js"></script>
-        <script src="scripts/directives/fit-text.js"></script>
-        <!-- endbuild -->
+    <!-- build:js({.tmp,app}) scripts/scripts.js -->
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/content-section.js"></script>
+    <script src="scripts/directives/fit-text.js"></script>
+    <script src="scripts/directives/site-navigation.js"></script>
+    <script src="scripts/directives/scroll-to.js"></script>
+    <script src="scripts/directives/where-am-i.js"></script>
+    <script src="scripts/directives/map.js"></script>
+    <!-- endbuild -->
 </body>
+
 </html>
