@@ -7,6 +7,7 @@ body {
     width: 100%;
     background-image: url(../images/usbus.jpg);
     background-size: cover;
+    
 /*    background-position: 100;*/
     background-attachment: fixed;
 }
@@ -51,11 +52,24 @@ div.big, div.small{
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
     box-sizing: border-box;     
 }
-
 .big,.small{ width: 100%; }
 
+    div.bigOnly {
+        display: none;
+    }
 
+    div.smallOnly {
+        display: block;
+    }
 
+div.big div div {
+    background: #FDFDFD;
+    padding: 10px;
+    -webkit-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 0px 2px 0px rgba(0,0,0,0.75);
+
+}
 
 @media only screen and (min-width: 770px){
     div.big,div.small{
@@ -70,6 +84,16 @@ div.big, div.small{
     div.small{ 
         width: 38.2%;
     }
+
+    div.smallOnly {
+        display:none;
+    }
+
+    div.bigOnly {
+        display: block;
+    }
+
+    
 }
 
 section {
@@ -108,7 +132,7 @@ section {
 }
 
 .big a{
-    color:white;
+    color:#66688E;
 }
 
 ul li a{ white-space:nowrap;}
